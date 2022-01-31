@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Prediction</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <!-- <script>
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+    </script>
+    <script>
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"
+    </script> -->
+<!--     
+    <script src="../js/form-validation.js"></script> -->
+</head>
+<body>
+    <div style="text-align:center;" class="typewriter">
+        <h1>Predict the chances of your Admission</h1>
+    </div>
+    <div class="box">
+        <div class="geeks">
+            <div class="inner bord">
+                <form id="admissionchecker" action="/predict" method="POST">
+                    <div>
+                        <label for="gre">Gre Score: </label>
+                        <br>
+                        <input type="number" step="any" id="gre" name="gre" placeholder="Enter GRE Score here....">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="toefl">TOEFL Score: </label>
+                        <br>
+                        <input type="number" step="any" id="toefl" name="toefl" placeholder="Enter TOEFL Score here...." required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="university">University Rating: </label>
+                        <br>
+                        <input type="number" id="university" name="university" placeholder="Enter University Rating Score here...." required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="sop">SOP: </label>
+                        <br>
+                        <input type="number" step="any" id="sop" name="sop" placeholder="Enter SOP here...." required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="lor">LOR: </label>
+                        <br>
+                        <input type="number" step="any" id="lor" name="lor" placeholder="Enter LOR here...." required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="cgpa">CGPA: </label>
+                        <br>
+                        <input type="number" step="any" id="cgpa" name="cgpa" placeholder="Enter CGPA here...." required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="research">Research: </label>
+                        <br>
+                        <select name="research" id="research">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div>
+                        <input class="butsub" type="submit" value="Predict">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" ></script>
+    <script src="../static/js/form-validation.js" ></script>
+</body>
+</html>
