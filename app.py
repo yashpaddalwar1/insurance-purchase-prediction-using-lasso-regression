@@ -47,7 +47,8 @@ def predict():
             arr = [[gre_score,toefl_score,university_rating,sop,lor,cgpa,research]]
             arrfit = scaler.transform(arr)
             prediction = lasso.predict(arrfit)
-            
+            if prediction[0] < 0:
+                prediction = [0]
             return render_template('predict.html',prediction=round(100*prediction[0]))
         # except Exception as e:
         #     print(f"The Exception is : {e}")
