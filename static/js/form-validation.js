@@ -50,56 +50,49 @@
 
 jQuery('#admissionchecker').validate({
 	rules:{
-		gre:{
+			age:{
 				required:true,
-				range: [0, 340]
+				range: [18, 100]
 			},
-			toefl:{
+			sex:{
 			    required:true,
-			    range: [0, 120]
 			},
-			university:{
+			bmi:{
 			   required:true,
-			   range: [0, 5]
+			   range: [16, 53.5]
 			},
-			sop:{
+			children:{
 			   required:true,
-			   range: [0, 5]
+			   range: [0, 14]
 			},
-			lor:{
-			   required:true,
-			   range: [0, 5]
+			smoker:{
+			   required:true
 			},
-			cgpa:{
-			   required:true,
-			   range: [0, 9.92]
-			},
-			research:"required"
+			region:{
+			   required:true
+			}
 	},
     messages:{
-		gre:{
+		age:{
 			required:"Please fill this field!",
-			range:"GRE Score Range should be between 0 to 340"
+			range:"Age should be greater than or equal to 18!"
 		},
-		toefl:{
-			required:"Please fill this field!",
-			range:"TOEFL Score should be between 0 and 120"
+		sex:{
+			required:"Please fill this field!"
 		},
-        university:{
+        bmi:{
 			required:"Please fill this field!",
-			range:"University Rating should be between 0 and 5"
+			range:"BMI ranges between 16 and 53.5"
 		},
-        sop:{
+        children:{
 			required:"Please fill this field!",
-			range:"SOP Score should be between 0 and 5"
+			range:"Please Enter a Valid Number!"
 		},
-        lor:{
-			required:"Please fill this field!",
-			range:"LOR Score should be between 0 and 5"
+        smoker:{
+			required:"Please fill this field!"
 		},
-        cgpa:{
-			required:"Please fill this field!",
-			range:"CGPA should be greater than 0 and less than 10"
+        region:{
+			required:"Please fill this field!"
 		}
 	},
 	submitHandler:function(form){
